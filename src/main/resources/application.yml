@@ -1,0 +1,9 @@
+security:
+  oauth2:
+    client:
+      clientId: spring-security-oauth2-read-write-client
+      clientSecret: spring-security-oauth2-read-write-client-password1234
+      accessTokenUri: http://localhost:7080/oauth/token
+      userAuthorizationUri: http://localhost:7080/oauth/authorize
+    resource:
+      userInfoUri: http://localhost:7080/api/user/info
