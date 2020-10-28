@@ -4,6 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 
@@ -12,6 +14,8 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 //@ComponentScan(basePackages = { "com.trinity.commons", "com.trinity.ms.invoicing" })
 @EntityScan({ "com.trinity.commons.model" })
 @EnableOAuth2Sso
+@EnableDiscoveryClient
+@EnableFeignClients
 public class InvoicingApplication {
 
 	public static void main(String[] args) {
